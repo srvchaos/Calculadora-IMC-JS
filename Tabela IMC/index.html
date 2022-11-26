@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+ 
+    <title>Tabela IMC</title>
+  
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+    <script type="text/javascript">
+        function calcula_imc(){
+        var altura = document.imcForm.altura.value;
+        var peso = document.imcForm.peso.value;
+        
+    
+var quadrado = (altura * altura);
+
+var calculo = (10000*peso/quadrado);
+
+if(calculo<18.5){
+alert("Você está magro com esse IMC " + calculo);
+}
+else if(calculo>=18.5 && calculo<24.9){
+alert("Você está com o peso ideal: " + calculo);
+}
+
+else if(calculo>=25 && calculo<29.9) {
+alert("Você está com sobrepeso com esse IMC: " + calculo);
+}
+else if(calculo>=30 && calculo<39.9) {
+alert("Você está com obesidade com esse IMC: " + calculo);
+}
+else if (calculo>40)
+alert("Você está com obesidade grave com esse IMC: " + calculo);
+}
+
+</script>
+
+
+<body>
+
+    <form name="imcForm" id="imcForm" action="#">
+    
+    <p>
+    Altura<br>
+    <input type="text" id="altura" name="altura" />
+    </p>
+    
+    <p>Peso <br>
+    <input type="text" id="peso" name="peso" />
+    </p>
+    
+    <p>
+    <label>
+    <input type="radio" name="sexo" value="1" id="sexo_0" />
+    Masculino</label>
+    <br>
+    <label>
+    <input type="radio" name="sexo" value="1" id="sexo_1" />
+    Feminino</label>
+
+    </p> <span style="font-size: x-small;"><a  href="" target=?_blank?></a>
+        <p><input name="Enviar" type="submit" value="Calcular" onclick="calcula_imc()" /></p></span></form></body>
+        <p></p>
+    
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
